@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buy_products",
+  "info": {
+    "name": "Buy-Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "biginteger"
+    },
+    "Image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "buy_checkout": {
+      "via": "buy_product",
+      "model": "buy-checkout"
+    }
+  }
+}

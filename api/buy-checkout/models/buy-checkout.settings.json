@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buy_checkouts",
+  "info": {
+    "name": "Buy-Checkout",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "buy_product": {
+      "model": "buy-products",
+      "via": "buy_checkout"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "buy_checkouts"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "City": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "Zip": {
+      "type": "biginteger"
+    }
+  }
+}

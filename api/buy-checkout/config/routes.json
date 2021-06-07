@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/buy-checkouts",
+      "handler": "buy-checkout.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buy-checkouts/count",
+      "handler": "buy-checkout.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buy-checkouts/:id",
+      "handler": "buy-checkout.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/buy-checkouts",
+      "handler": "buy-checkout.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/buy-checkouts/:id",
+      "handler": "buy-checkout.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/buy-checkouts/:id",
+      "handler": "buy-checkout.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
